@@ -120,3 +120,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Make entire calendar transparent so parent background shows */
+.my-adaptive-calendar,
+.my-adaptive-calendar .rdp-root,
+.my-adaptive-calendar .rdp,
+.my-adaptive-calendar .rdp-months,
+.my-adaptive-calendar .rdp-month {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
