@@ -196,7 +196,7 @@ const res = await fetch(
                     <ReactCountryFlag
                       countryCode={COUNTRY_MAP[e.country] || ""}
                       svg
-                      style={{ width: "1.2em", height: "1.2em" }}
+                              style={{ width: "1.2em", height: "1em", border: "0.5px solid #d1d5db"}}
                     />
                     <span className="text-sm font-medium">{e.country}</span>
                   </div>
