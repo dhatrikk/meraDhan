@@ -69,7 +69,7 @@ export default function Events({
     );
   };
 
- return (
+  return (
     <>
       {/* -------------------------------------------------- */}
       {/* TOP DATE HEADING */}
@@ -97,13 +97,11 @@ export default function Events({
       {/* -------------------------------------------------- */}
       {/* GRID: TABLE LEFT (2fr), CALENDAR RIGHT (1fr) */}
       {/* -------------------------------------------------- */}
-      <div className="max-w-7xl mx-auto mt-4  grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6">
-
+      <div className="w-full mx-auto mt-4  grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-6">
         {/* ---------------------------- */}
         {/* LEFT SIDE – TABLE + MOBILE */}
         {/* ---------------------------- */}
         <div className="md:col-span-1">
-
           {/* MOBILE CALENDAR */}
           {showCalendar && (
             <div className="md:hidden mb-4 rounded-2xl bg-gray-100 w-fit">
@@ -144,7 +142,10 @@ export default function Events({
 
                     {!loading && events.length === 0 && (
                       <tr>
-                        <td colSpan={3} className="p-4 text-center text-gray-500">
+                        <td
+                          colSpan={3}
+                          className="p-4 text-center text-gray-500"
+                        >
                           No events for this date
                         </td>
                       </tr>
@@ -166,7 +167,9 @@ export default function Events({
                                   border: "0.5px solid #d1d5db",
                                 }}
                               />
-                              <span className="text-sm font-medium">{e.country}</span>
+                              <span className="text-sm font-medium">
+                                {e.country}
+                              </span>
                             </div>
                           </td>
 
@@ -184,12 +187,17 @@ export default function Events({
             {loading && <p className="text-center text-gray-600">Loading...</p>}
 
             {!loading && events.length === 0 && (
-              <p className="text-center text-gray-500">No events for this date</p>
+              <p className="text-center text-gray-500">
+                No events for this date
+              </p>
             )}
 
             {!loading &&
               events.map((e: any, i: number) => (
-                <div key={i} className="border p-3 rounded-xl shadow-sm bg-white">
+                <div
+                  key={i}
+                  className="border p-3 rounded-xl shadow-sm bg-white"
+                >
                   <div className="grid grid-cols-3 items-center mb-1">
                     <div className="text-sm font-semibold">{e.time}</div>
 
@@ -206,7 +214,9 @@ export default function Events({
                       <span className="text-sm font-medium">{e.country}</span>
                     </div>
 
-                    <div className="flex justify-end">{renderStars(e.impact)}</div>
+                    <div className="flex justify-end">
+                      {renderStars(e.impact)}
+                    </div>
                   </div>
 
                   <p className="font-semibold mt-1">{e.event}</p>
@@ -239,5 +249,4 @@ export default function Events({
       </div>
     </>
   );
-
 }
