@@ -14,7 +14,7 @@ export default function Home() {
   const [endDate, setEndDate] = useState<Date | undefined>(new Date());
 
   return (
-        <div className="w-full md:p-25 p-20">
+        <div className="w-full md:p-25 p-10">
       <HeaderSection/>
 
       <TabsSection
