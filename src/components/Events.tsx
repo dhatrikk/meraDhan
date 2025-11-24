@@ -74,7 +74,7 @@ export default function Events({
       {/* -------------------------------------------------- */}
       {/* TOP DATE HEADING */}
       {/* -------------------------------------------------- */}
-      <div className="max-w-7xl mx-auto mt-6 px-4">
+      <div className="max-w-7xl mx-auto mt-6">
         <h2 className="text-2xl font-semibold">
           {startDate &&
             startDate.toLocaleDateString("en-GB", {
@@ -97,7 +97,7 @@ export default function Events({
       {/* -------------------------------------------------- */}
       {/* GRID: TABLE LEFT (2fr), CALENDAR RIGHT (1fr) */}
       {/* -------------------------------------------------- */}
-      <div className="w-full mx-auto mt-4  grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-6">
+      <div className="w-full mx-auto mt-1  grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-6">
         {/* ---------------------------- */}
         {/* LEFT SIDE – TABLE + MOBILE */}
         {/* ---------------------------- */}
